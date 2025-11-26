@@ -1,8 +1,10 @@
 # nitro-type-pwner
 
-Expereince NitroType like you're a baller...
+You can now expereince NitroType like you're a baller...
 
 ![screenshot](https://i.postimg.cc/DZv7Gx4M/image.png)
+
+I did this because, after they switched to a subscription method, they refused to honor my lifetime gold I had previously bought...
 
 # Disclaimer
 This mod re-adds the “General Beauregard” car purely for nostalgia and preservation purposes. The original asset includes imagery associated with the Confederate flag, which I do not support or endorse in any way whatsoever. This content is included only to retain historical accuracy of older Nitro Type assets, not to promote the symbolism or ideology tied to it. You may of course, delte the parts that do this.
