@@ -7,7 +7,7 @@ You can now expereince NitroType like you're a baller...
 I did this because, after they switched to a subscription method, they refused to honor my lifetime gold I had previously bought...
 
 # Disclaimer
-This mod re-adds the “General Beauregard” car purely for nostalgia and preservation purposes. The original asset includes imagery associated with the Confederate flag, which I do not support or endorse in any way whatsoever. This content is included only to retain historical accuracy of older Nitro Type assets, not to promote the symbolism or ideology tied to it. You may of course, delte the parts that do this.
+This mod re-adds the “General Beauregard” car purely for nostalgia and preservation purposes. The original asset includes imagery associated with the Confederate flag, which I do not support or endorse in any way whatsoever. This content is included only to retain historical accuracy of older Nitro Type assets, not to promote the symbolism or ideology tied to it. You may of course, delete the parts that do this.
 
 # Cosmetics
 The mod adds two new cars (The Griswold Family Truckster, and General Beauregard) to the game. Any modifications done are purely client side and may not be able to be used server sided. Exploits like that existed long ago, but were closed shortly after made public. All mods are done purely through CSS or JS, and unlike the previous 'data injection' method found in other scripts, should be permanent as long as the scripts are kept on. 
