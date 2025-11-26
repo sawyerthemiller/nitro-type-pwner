@@ -1,0 +1,327 @@
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://i.ibb.co/6JGHcsXn/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav.nav {
+  background: transparent;
+  outline: 2px solid white;
+  border-radius: 10px;
+}
+
+ul.nav-list {
+  background-color: rgba(50, 50, 50, 0.45);
+}
+
+li.nav-list-item.is-current {
+  background: skyblue;
+  border: 2px solid blue;
+  border-radius: 10px;
+  box-shadow: none;
+  opacity: 0.75;
+}
+
+a.nav-link {
+  color: white;
+  border-radius: 10px;
+}
+
+a.dropdown-link {
+  color: white;
+}
+
+div.dropdown {
+  background-color: transparent;
+  outline: 2px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ===== PLAYER NAME / TAG ===== */
+
+a.player-name--tag.link.link--bare.mrxxs.twb {
+  color: violet;
+}
+
+a.player-name--tag.link.link--bare.mrxxs.twb::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("/dist/site/images/themes/profiles/gold/nt-gold-icon-xl.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 15px 2px 0 10px;
+}
+
+a.link.link--bare.type-ellip {
+  position: relative;
+  top: 2px;
+}
+
+/* ===== PROFILE OVERLAY BOX ===== */
+
+div.por {
+  backdrop-filter: blur(5px);
+  height: 80px;
+  width: 300px;
+  position: relative;
+  bottom: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+/* ===== HIDE ELEMENTS ===== */
+
+.nt-admin-panel-label-garage,
+.notify,
+a.seasonTeaser,
+div.profile-ad.well.well--b,
+.profile-league,
+a.btn.btn--primary.btn--fw.animate--iconSlam.well.well--b.well--s,
+a.goldTeaser.link.link--bare.goldTeaser--profile-banner,
+div.structure-spacer-left,
+div.nt-report-ad.btn.btn--compact2.btn--dark.cup,
+div.structure-leaderboard.por,
+#layoutLeft,
+div.ad--container,
+a.goldTeaser.link.link--bare,
+div.gridTable-row.is-disqualified,
+a.events--teaser,
+div.events--garage-not-joined,
+div.site-takeover--header,
+.site-takeover--footer {
+  display: none;
+}
+
+/* ===== BUTTON FIXES ===== */
+
+a.btn.btn--light.btn--outline.btn--fw.animate--iconSlam.well.well--b.well--s {
+  border: none;
+  top: 12px;
+}
+
+/* ===== MYSTERY BOX ===== */
+
+div.mysteryBox-content {
+  height: 76px;
+}
+
+div.mysteryBox-action {
+  position: relative;
+  bottom: 45px;
+  width: 85px;
+  left: 135px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+/* ===== DROPDOWNS ===== */
+
+ul.list.list--f.dropdown-items {
+  background-color: transparent !important;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+li.list-item.dropdown-item {
+  background-color: rgba(135, 206, 235, 0.9);
+}
+
+/* ===== SHOP ===== */
+
+div.page-shop--current-balance {
+  background-color: rgba(135, 206, 235, 0.5);
+  backdrop-filter: blur(20px);
+  border: 2px solid white;
+}
+
+div.page-shop--current-balance--money.as-nitro-cash--prefix,
+div.page-shop--current-balance--title {
+  color: black;
+  position: relative;
+  bottom: 4px;
+  text-shadow: none;
+}
+
+div.page-shop--bundle.with-cash {
+  display: none;
+}
+
+div.page-shop--product--container {
+  box-shadow: none;
+  border: 3px solid white;
+}
+
+div.page-shop--category,
+div.page-shop--selected-dealership {
+  background-color: #1f222e;
+  box-shadow: none;
+}
+
+div.page-shop--selected-dealership {
+  border-radius: 15px;
+}
+
+/* ===== MODAL ===== */
+
+div.modal-overlay {
+  backdrop-filter: blur(5px);
+}
+
+button.modal-close {
+  transform: scale(1.725);
+}
+
+/* ===== TABLE ===== */
+
+div.gridTable-row {
+  border-left: 2px solid white;
+}
+
+div.gridTable-row.is-self {
+  backdrop-filter: blur(5px);
+  border-left: none;
+}
+
+div.gridTable-row.is-self::before {
+  display: none;
+}
+
+span.card-teamTag {
+  margin-right: 5px;
+}
+
+/* ===== LAYOUT SHIFTING ===== */
+
+main.structure-content,
+div.header,
+footer.structure-footer {
+  position: relative;
+  right: 75px;
+}
+
+main.structure-content {
+  margin-top: -25px;
+}
+
+div.structure.structure--nitrotype {
+  position: relative;
+  right: -50px;
+}
+
+/* ===== PROFILE PAGE TWEAKS ===== */
+
+div.profile-customizations.tac {
+  position: relative;
+  left: 380px;
+  bottom: 100px;
+  z-index: 9;
+}
+
+div.profile-title {
+  margin-left: 10px;
+}
+
+div.profile-dailyChallenges.card.card--open.card--d.card--grit.card--shadow-l {
+  position: relative;
+  bottom: 20px;
+}
+
+/* ===== PROFILE BACKGROUND ===== */
+
+.profile-bg {
+  width: 98%;
+  height: 98%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    linear-gradient(130deg, hsla(0,0%,100%,.9) 30%, hsla(0,0%,100%,.6) 60%, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0) 65%, hsla(0,0%,100%,.4) 70%, hsla(0,0%,100%,0) 0),
+    linear-gradient(180deg, #fadb66 96%, #fce797);
+  border: 1px solid rgba(46,49,66,.2);
+  box-shadow: inset 3px 3px 5px rgba(46,49,66,.2), inset -1px -3px 6px rgba(46,49,66,.15);
+  z-index: 1;
+}
+
+/* ===== GOLD BORDER ===== */
+
+.profile-goldBorder {
+  background: linear-gradient(
+      to right bottom,
+      rgb(249, 208, 52) 10%,
+      rgb(144, 115, 4) 20%,
+      rgb(224, 187, 47) 40%,
+      rgb(144, 115, 4) 70%,
+      rgb(224, 187, 47) 80%,
+      rgb(193, 154, 6) 90%
+    ) 0% 0% / auto repeat scroll padding-box border-box;
+
+  background-color: transparent;
+
+  border: 2px solid rgba(249, 208, 52, 0.8);
+  border-radius: 20px;
+  border-image: none 100% / 1 / 0 stretch;
+
+  box-sizing: border-box;
+  color: rgb(46, 49, 65);
+
+  content: " ";
+  display: block;
+
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 1024px;
+  height: 635px;
+
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ===== GARAGE CAR REPLACEMENTS ===== */
+
+div.garage-vehichleImage[style*="/cars/24_small_1.png"] {
+  background-image: url("https://i.ibb.co/d4xPH9kw/family-truckster.png") !important;
+  background-size: 65% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+div.garage-vehichleImage[style*="/cars/oneace_small.png"] {
+  background-image: url("https://i.ibb.co/zHJf4wXt/gbrgd.png") !important;
+  background-size: 80%;
+}
+
+/* ===== DECORATION ===== */
+
+/* ===== OFFLOADED REST TO SCRIPT */
+
