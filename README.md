@@ -1,6 +1,6 @@
 # nitro-type-pwner
 
-Expereince NitroType like your a baller...
+Expereince NitroType like you're a baller...
 
 ![screenshot](https://i.postimg.cc/DZv7Gx4M/image.png)
 
