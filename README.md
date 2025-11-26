@@ -19,3 +19,7 @@ About the old data injection method, it still does work, but is very fickle, som
 This mod attempts to remove ads from the page, but it is always recommended you browse the internet with an adblocker. Thats not my words, that's the U.S. Government words lol. Stay safe and have fun.
 
 To set a custom user tag, edit the tampermonkey script. To enable gold and the cosmetic mods, paste in the styles.css part
+
+!! It is also recommended you use the [**Nitro Type Admin Panel**](https://greasyfork.org/en/scripts/537263-nitro-type-admin-panel)
+ Script with one of the afformentioned extensions. It lets you unlock every car in the game, and race with them !!
+
