@@ -35,9 +35,19 @@
         left: 350px;
         z-index: 9;
       }
+
+      .player-name--tag.link.link--bare.mrxxs.twb::before {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url("/dist/site/images/themes/profiles/gold/nt-gold-icon-xl.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 15px 2px 0 10px;
+      }
     `;
     document.head.appendChild(style);
-
 
 })();
 
