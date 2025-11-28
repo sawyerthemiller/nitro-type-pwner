@@ -87,6 +87,7 @@ div.por {
 .nt-admin-panel-label-garage,
 .notify,
 a.seasonTeaser,
+div.requires-gold::before,
 a.link.link--gold.link--xs,
 div.profile-ad.well.well--b,
 .profile-league,
@@ -200,7 +201,8 @@ button.modal-close {
 /* ===== TABLE ===== */
 
 div.gridTable-row {
-  border-left: 2px solid white;
+  border-left: 0px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 div.gridTable-row.is-self {
@@ -329,4 +331,79 @@ div.profile--active-car--car-name {
 
 /* ===== DECORATION ===== */
 
-/* ===== OFFLOADED REST TO SCRIPT ===== */
+/* ===== RESULTS PAGE FIXES ===== */
+
+/* Fuel Section */
+.tsxs.tc-fuel.tsi.db {
+  width: 200px;
+}
+
+/* Grid Table Defaults */
+.gridTable * {
+  background-color: transparent;
+  z-index: 0;
+}
+
+/* Layout Adjustments */
+.g-b.g-b--3of12.por {
+  border: 0;
+  top: 7px;
+  right: 9px;
+}
+
+.g-b.g-b--9of12 {
+  z-index: 9;
+  margin-left: 2px;
+}
+
+.g-b.g-b--3of12.race-results--cta {
+  position: relative;
+  left: 700px;
+  bottom: 135px;
+}
+
+/* Footer */
+.raceResults-footer.row.row--o.row--s.ptxxs.pbxs {
+  position: relative;
+  right: 2px;
+  width: 100.40%;
+  height: 175px;
+}
+
+/* Flag List */
+.list.list--inline.list--xs.list--flag.list--r.tsxs.por {
+  position: relative;
+  top: 3px;
+  border: 0;
+  backdrop-filter: blur(0);
+}
+
+/* Grid Rows */
+
+div.g.g--flag.row.row--s.row--o,
+div.gridTable-row::after,
+div.pane-userHeader.row.row--xs.row--o,
+div.pane-footer.well--p.well--xs_p.row.row--s.row--o,
+div.pane-interior,
+div.pane-tail {
+  display: none;
+}
+
+div.raceResults-footer.row.row--o.row--s.ptxxs.pbxs {
+  position: relative;
+  top: 140px;
+  backdrop-filter: blur(6px);
+}
+
+div.raceResults.raceResults--default {
+  height: 110%;
+}
+
+img.img--noMax.dib {
+  position: relative;
+  bottom: 12px;
+}
+
+div.footer-nav {
+  margin-top: 200px
+}
