@@ -109,9 +109,11 @@ div.site-takeover--header,
 /* ===== BUTTON FIXES ===== */
 
 a.btn.btn--light.btn--outline.btn--fw.animate--iconSlam.well.well--b.well--s {
-  border: none;
   top: 12px;
   background-color: transparent;
+  box-shadow: none;
+  border: 0px solid white;
+  outline: 0px;
 }
 
 div.race-with-friends-summary--friend-status {
