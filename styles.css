@@ -88,6 +88,9 @@ div.por {
 .notify,
 a.seasonTeaser,
 div.requires-gold::before,
+td.table-cell.table-cell--actions *,
+a.customizer--upgrade-to-gold,
+div.customizer--tooltip.requires-gold,
 a.link.link--gold.link--xs,
 div.profile-ad.well.well--b,
 .profile-league,
@@ -405,5 +408,41 @@ img.img--noMax.dib {
 }
 
 div.footer-nav {
-  margin-top: 200px
+  margin-top: 200px;
+}
+
+div.profile-bgHead {
+  background-image: url("https://i.ibb.co/jPMCCtf5/space.png");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid white;
+  border-radius: 15px;
+}
+
+div.profile--grid--footer {
+  margin-left: 10px;
+}
+
+h2.raceResults-title.raceResults-title--main::after,
+h2.raceResults-title.raceResults-title--main {
+  background-color: purple;
+}
+
+div.raceResults-title.raceResults-title--place.h2 {
+  color: purple;
+}
+
+div.header-nav > div.g-b.g-b--2of12 >* {
+  background-color: rgba(128, 0, 128, 0.6);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  transform: scale(1.025);
+}
+
+div.flash.flash--garage.well.well--l.well--t.mrs.mls {
+  border: 2px solid white;
+}
+
+span.type-ellip.tss {
+  text-transform: lowercase;
 }
