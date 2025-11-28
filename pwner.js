@@ -1,15 +1,13 @@
 // ==UserScript==
 // @name         P-W-N NitroType Reborn
 // @namespace    Leopard Industries
-// @version      1.2
+// @version      1.3
 // @match        https://www.nitrotype.com/garage
 // @icon         https://i.postimg.cc/9F3NNrJ4/nt.png
 // ==/UserScript==
 
-
 (function() {
     'use strict';
-
 
     function updateCar(selector, oldTip, newTip) {
         const carDiv = document.querySelector(selector);
@@ -18,12 +16,18 @@
         }
     }
 
-
     updateCar('div.garage-vehichleImage[style*="/cars/24_small_1.png"]', 'Blitz C-64', 'Family Truckster');
     updateCar('div.garage-vehichleImage[style*="/cars/oneace_small.png"]', 'Hydrova One Ace', 'General Beauregard');
 
     // set your custom user tag below
     document.querySelector('.profile-title').textContent = 'Floofy One';
+
+    // --- ADD YOUR TEAM TAG SWAP HERE ---
+    const teamTag = document.querySelector('a[href="/team/VWV"].player-name--tag');
+    if (teamTag) {
+        teamTag.textContent = "[UWU]";
+    }
+    // ----------------------------------------
 
     // adds the gold profile banner, only on the garage page
     const style = document.createElement("style");
@@ -50,4 +54,3 @@
     document.head.appendChild(style);
 
 })();
-
