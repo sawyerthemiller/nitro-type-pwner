@@ -111,6 +111,16 @@ div.site-takeover--header,
 a.btn.btn--light.btn--outline.btn--fw.animate--iconSlam.well.well--b.well--s {
   border: none;
   top: 12px;
+  background-color: transparent;
+}
+
+div.race-with-friends-summary--friend-status {
+  background-color: white;
+  border-radius: 5px;
+}
+
+div.race-with-friends-summary--friend-count {
+  color: black;
 }
 
 /* ===== MYSTERY BOX ===== */
@@ -313,5 +323,4 @@ div.garage-vehichleImage[style*="/cars/oneace_small.png"] {
 
 /* ===== DECORATION ===== */
 
-/* ===== OFFLOADED REST TO SCRIPT */
-
+/* ===== OFFLOADED REST TO SCRIPT ===== */
