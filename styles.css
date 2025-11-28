@@ -323,6 +323,10 @@ div.garage-vehichleImage[style*="/cars/oneace_small.png"] {
   background-size: 80%;
 }
 
+div.profile--active-car--car-name {
+  margin-left: 75px;
+}
+
 /* ===== DECORATION ===== */
 
 /* ===== OFFLOADED REST TO SCRIPT ===== */
