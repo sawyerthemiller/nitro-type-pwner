@@ -1,13 +1,22 @@
 // ==UserScript==
 // @name         P-W-N NitroType Reborn
 // @namespace    Leopard Industries
-// @version      1.3
-// @match        https://www.nitrotype.com/garage
+// @version      1.4
+// @match        https://www.nitrotype.com/*
 // @icon         https://i.postimg.cc/9F3NNrJ4/nt.png
 // ==/UserScript==
 
 (function() {
     'use strict';
+
+    // attempt to set actual gold
+    setInterval(function(){
+        var a = JSON.parse(localStorage["persist:nt"]);
+        var b = JSON.parse(a.user);
+        b.membership = "gold";
+        a.user = JSON.stringify(b);
+        localStorage["persist:nt"] = JSON.stringify(a);
+     }, 1000);
 
     function updateCar(selector, oldTip, newTip) {
         const carDiv = document.querySelector(selector);
