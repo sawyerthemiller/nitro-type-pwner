@@ -446,3 +446,8 @@ div.flash.flash--garage.well.well--l.well--t.mrs.mls {
 span.type-ellip.tss {
   text-transform: lowercase;
 }
+
+div.loader.loader--default {
+  position: relative;
+  left: 65px;
+}
