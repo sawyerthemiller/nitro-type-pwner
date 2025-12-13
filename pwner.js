@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         P-W-N NitroType Reborn
 // @namespace    Leopard Industries
-// @version      1.4
-// @match        https://www.nitrotype.com/*
+// @version      1.2
+// @match        https://www.nitrotype.com/garage
 // @icon         https://i.postimg.cc/9F3NNrJ4/nt.png
 // ==/UserScript==
 
@@ -41,6 +41,95 @@
     // adds the gold profile banner, only on the garage page
     const style = document.createElement("style");
     style.textContent = `
+
+    #nt-gold-sparkles {
+      position: relative;
+      height: 40px;
+      margin-bottom: -35px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* multiple sparkle layers = randomness */
+    #nt-gold-sparkles::before,
+    #nt-gold-sparkles::after {
+      content: "";
+      position: absolute;
+      bottom: -50px; /* start from bottom like a firework launch */
+      left: 43%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 20px;
+      filter: blur(0.4px);
+    }
+
+    /* layer 1 */
+    #nt-gold-sparkles::before {
+      background:
+        radial-gradient(circle at 8% 50%,  #fff3bf 0 1px, transparent 4px),
+        radial-gradient(circle at 18% 20%, #ffd966 0 1.2px, transparent 4px),
+        radial-gradient(circle at 30% 65%, #ffe066 0 1px, transparent 4px),
+        radial-gradient(circle at 44% 30%, #fff9db 0 1.3px, transparent 4px),
+        radial-gradient(circle at 57% 55%, #ffd43b 0 1px, transparent 4px),
+        radial-gradient(circle at 70% 25%, #ffec99 0 1.2px, transparent 4px),
+        radial-gradient(circle at 85% 60%, #fff3bf 0 1px, transparent 4px);
+      opacity: 0.7;
+      animation: fireworkA 0.7s ease-out infinite;
+    }
+
+    /* layer 2 */
+    #nt-gold-sparkles::after {
+      background:
+        radial-gradient(circle at 12% 30%, #ffd966 0 1px, transparent 4px),
+        radial-gradient(circle at 26% 55%, #fff3bf 0 1.3px, transparent 4px),
+        radial-gradient(circle at 39% 18%, #ffe066 0 1px, transparent 4px),
+        radial-gradient(circle at 52% 65%, #fff9db 0 1.2px, transparent 4px),
+        radial-gradient(circle at 66% 35%, #ffd43b 0 1px, transparent 4px),
+        radial-gradient(circle at 78% 50%, #ffec99 0 1.3px, transparent 4px),
+        radial-gradient(circle at 92% 25%, #fff3bf 0 1px, transparent 4px);
+      opacity: 0.6;
+      animation: fireworkB 1.2s ease-out infinite;
+    }
+
+    /* fireworks shoot up and fade */
+    @keyframes fireworkA {
+      0% {
+        transform: translateX(-50%) translateY(0) scale(0.5);
+        opacity: 0.3;
+      }
+      40% {
+        transform: translateX(-50%) translateY(-40px) scale(1);
+        opacity: 0.9;
+      }
+      60% {
+        transform: translateX(-50%) translateY(-60px) scale(1.1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateX(-50%) translateY(-80px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fireworkB {
+      0% {
+        transform: translateX(-50%) translateY(0) scale(0.5);
+        opacity: 0.2;
+      }
+      30% {
+        transform: translateX(-50%) translateY(-35px) scale(1);
+        opacity: 0.8;
+      }
+      70% {
+        transform: translateX(-50%) translateY(-55px) scale(1.1);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateX(-50%) translateY(-75px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
       .structure-content::before {
         content: url("/dist/site/images/themes/profiles/gold/deco-ntGoldLogo2.png");
         position: relative;
@@ -63,3 +152,14 @@
     document.head.appendChild(style);
 
 })();
+
+(function insertGoldSparkles() {
+  const target = document.querySelector('.structure-content');
+  if (!target || document.getElementById('nt-gold-sparkles')) return;
+
+  const sparkles = document.createElement('div');
+  sparkles.id = 'nt-gold-sparkles';
+
+  target.parentNode.insertBefore(sparkles, target);
+})();
+
