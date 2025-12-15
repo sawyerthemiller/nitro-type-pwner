@@ -17,7 +17,7 @@ About the old data injection method, it still does work, but is very fickle, som
 # Requirements for Chrome or Firefox
 1. Tampermonkey or Violentmonkey or Greasemonkey
 2. Stylebot
-3. UBO Extension with [this list](https://raw.githubusercontent.com/sawyerthemiller/the-clean-web/refs/heads/main/filter.ubo)
+3. UBO Extension with [this list](https://raw.githubusercontent.com/sawyerthemiller/the-clean-web/refs/heads/main/filter.ubo) and Firefox or Brave or a non-chrome browser
 
 This mod attempts to remove ads from the page, but it is always recommended you browse the internet with an adblocker. Thats not my words, that's the U.S. Government words lol. Stay safe and have fun.
 
