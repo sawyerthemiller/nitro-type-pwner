@@ -31,12 +31,11 @@
     // set your custom user tag below
     document.querySelector('.profile-title').textContent = 'Floofy One';
 
-    // --- ADD YOUR TEAM TAG SWAP HERE ---
+    // set your custom team tag below
     const teamTag = document.querySelector('a[href="/team/VWV"].player-name--tag');
     if (teamTag) {
         teamTag.textContent = "[UWU]";
     }
-    // ----------------------------------------
 
     // adds the gold profile banner, only on the garage page
     const style = document.createElement("style");
@@ -163,3 +162,45 @@
   target.parentNode.insertBefore(sparkles, target);
 })();
 
+(() => {
+    const transparentPNG = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';
+    const targetPattern = 'nitro_default.png';
+
+    const NativeImage = window.Image;
+    window.Image = function() {
+        const img = new NativeImage();
+        Object.defineProperty(img, 'src', {
+            set(val) {
+                if (typeof val === 'string' && val.includes(targetPattern)) {
+                    this.setAttribute('src', transparentPNG);
+                } else {
+                    this.setAttribute('src', val);
+                }
+            },
+            get() { return this.getAttribute('src'); }
+        });
+        return img;
+    };
+
+    const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+            for (const node of mutation.addedNodes) {
+                if (node.nodeType === 1) { // Element
+                    if (node.tagName === 'IMG' && node.src.includes(targetPattern)) {
+                        node.src = transparentPNG;
+                    }
+                    node.querySelectorAll(`img[src*="${targetPattern}"]`).forEach(img => img.src = transparentPNG);
+                }
+            }
+        }
+    });
+
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+    });
+
+    const style = document.createElement('style');
+    style.innerHTML = `img[src*="${targetPattern}"] { content: url("${transparentPNG}") !important; }`;
+    document.documentElement.appendChild(style);
+})();
