@@ -204,3 +204,32 @@
     style.innerHTML = `img[src*="${targetPattern}"] { content: url("${transparentPNG}") !important; }`;
     document.documentElement.appendChild(style);
 })();
+
+(function () {
+    'use strict';
+
+    function closeGoldModal() {
+        const modal = document.querySelector('.modal--season-ending-announcement');
+        if (!modal) return;
+
+        const closeBtn = modal.closest('.modal-container')
+            ?.querySelector('.modal-close');
+
+        if (closeBtn) {
+            closeBtn.click();
+        }
+    }
+
+    // Run once in case it's already there
+    closeGoldModal();
+
+    // Watch for future popups
+    const observer = new MutationObserver(() => {
+        closeGoldModal();
+    });
+
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+    });
+})();
